@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-eyes"
+version = "0.1.0"
+description = "Floating traffic-light indicators for Claude Code sessions — real-time status dots (green/yellow/gray/red) showing what each Claude window is doing. 悬浮红绿灯指示灯，实时显示 Claude Code 会话状态。"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "wzp0514", email = "623964346@qq.com"},
+]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["claude-code", "status-indicator", "hooks", "tkinter", "floating-panel", "productivity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/wzp0514/claude-eyes"
+Repository = "https://github.com/wzp0514/claude-eyes"
+Issues = "https://github.com/wzp0514/claude-eyes/issues"
+
+[project.scripts]
+claude-eyes = "claude_eyes.manager:main"
+claude-eyes-setup = "claude_eyes.setup:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
